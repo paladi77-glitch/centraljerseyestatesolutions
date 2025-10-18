@@ -1,0 +1,67 @@
+# Central Jersey Estate Solutions - Official Website
+
+This repository contains the complete source code for the official website of Central Jersey Estate Solutions. The site is a modern, responsive, multi-page static website built with vanilla HTML, CSS, and JavaScript, optimized for performance and easy deployment on Netlify.
+
+## Description
+
+Central Jersey Estate Solutions guides families through the complexities of the probate process, with a special focus on real estate matters. This website was created by cloning an existing WordPress/Divi site and rebuilding it from the ground up with clean, lightweight code. This approach ensures faster load times, better security, and seamless deployment on modern hosting platforms like Netlify.
+
+## Features
+
+* **Fully Responsive Design**: The layout adapts perfectly to desktops, tablets, and mobile devices.
+* **Multi-Page Structure**: The site includes dedicated pages for the homepage, a market evaluation form, and a cash advance form.
+* **Interactive Elements**:
+    * An auto-playing image slider on the homepage.
+    * A fully functional FAQ accordion that allows users to expand and collapse answers.
+* **Netlify Forms Integration**: All forms are ready for Netlify deployment and include:
+    * `data-netlify="true"` attribute for automatic form detection.
+    * Built-in reCAPTCHA (`data-netlify-recaptcha="true"`) for spam protection.
+    * Honeypot fields for an extra layer of security.
+* **Lead Generation Funnel**: A dedicated form allows users to download a "Probate Checklist" PDF after submitting their contact information, redirecting them to a thank-you page for the download.
+
+## File Structure
+
+The project is organized into a clean and straightforward file structure:
+
+```
+/
+|-- index.html              # The main homepage
+|-- market-evaluation.html  # The detailed "Probate Real Estate Information Form" page
+|-- cash-advance.html       # The page for the inheritance cash advance service and form
+|-- thank-you.html          # The page users see after submitting the checklist download form
+|-- style.css               # Contains all styling for the entire website
+|-- script.js               # Handles the image slider and FAQ accordion functionality
+|-- /assets/
+    |-- attila.jpg
+    |-- estate-solutions-icons.png
+    |-- gallery-banner.jpg
+    |-- cash-advance-why.jpg
+    |-- cash-advance-work.jpg
+    |-- probate-checklist.pdf   # (And all other images...)
+```
+
+## Deployment on Netlify
+
+This site is optimized for one-click deployment on [Netlify](https://www.netlify.com/).
+
+1.  Push this repository to your GitHub account.
+2.  Log in to Netlify and select "Add new site" -> "Import an existing project".
+3.  Connect to your GitHub and select this repository.
+4.  Netlify will automatically detect the build settings. You can leave them as the default.
+5.  Click "Deploy site".
+
+### Form Handling
+
+Netlify will automatically detect all forms that have the `data-netlify="true"` attribute. To receive email notifications for form submissions:
+
+1.  Go to your site's dashboard on Netlify.
+2.  Navigate to **Site settings > Forms > Form notifications**.
+3.  Add an "Email notification" and set the recipient email to `info@centraljerseyestatesolutions.com`.
+
+## How to Use Locally
+
+1.  Clone the repository: `git clone <repository-url>`
+2.  Navigate into the project directory.
+3.  Ensure all images and the `probate-checklist.pdf` file are placed inside the `/assets/` folder.
+4.  Open the `index.html` file in your web browser to view the site.
+````
