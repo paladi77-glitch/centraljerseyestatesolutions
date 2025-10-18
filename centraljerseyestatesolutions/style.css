@@ -1,0 +1,209 @@
+/* --- General Styles --- */
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: Arial, sans-serif; color: #333; background-color: #fff; line-height: 1.6; }
+.button { display: inline-block; background-color: #19469D; color: #ffffff; border-radius: 4px; padding: 12px 24px; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 14px; border: 2px solid #19469D; transition: background-color 0.3s, color 0.3s; }
+.button:hover { background-color: #ffffff; color: #19469D; }
+.button.small-button { padding: 8px 16px; font-size: 12px; }
+.button.button-light { background-color: #fff; color: #19469D; border-color: #fff; }
+.button.button-light:hover { background-color: transparent; color: #fff; }
+.header-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+.text-center { text-align: center; }
+.hidden { display: none; }
+
+/* --- Header --- */
+.site-header { background-color: #0C0E24; color: #fff; position: sticky; top: 0; z-index: 100; }
+.header-top-bar { padding: 8px 0; font-size: 14px; border-bottom: 1px solid #333; }
+.contact-info a { color: #fff; text-decoration: none; }
+.contact-info span { margin-right: 20px; }
+.header-main-bar { padding: 15px 0; }
+.logo img { height: 40px; }
+.main-nav ul { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 20px; }
+.main-nav a { color: #fff; text-decoration: none; font-size: 14px; padding-bottom: 5px; }
+.main-nav a.active, .main-nav a:hover { border-bottom: 2px solid #19469D; }
+
+/* --- Slider Section --- */
+.slider-section { width: 100%; overflow: hidden; position: relative; height: 70vh; }
+.slides { position: relative; width: 100%; height: 100%; }
+.slide { min-width: 100%; height: 100%; background-size: cover; background-position: center; position: absolute; top: 0; left: 0; display: flex; justify-content: center; align-items: center; text-align: center; color: #fff; opacity: 0; transition: opacity 1s ease-in-out; z-index: 1;}
+.slide.active { opacity: 1; z-index: 2; }
+.slide::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.5); }
+.slide-content { position: relative; z-index: 3; max-width: 800px; padding: 20px; }
+.slide-content h2 { font-size: 42px; margin-bottom: 15px; color: #fff; }
+.slide-content p { font-size: 18px; margin-bottom: 25px; }
+.slider-dots { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px; z-index: 5; }
+.dot { width: 12px; height: 12px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.5); cursor: pointer; transition: background-color 0.3s; }
+.dot.active { background-color: #fff; }
+
+/* --- Content Sections --- */
+.content-section { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
+.content-section.alternate-bg { background-color: #f4f4f4; }
+.content-section h1, .content-section h2 { font-size: 32px; margin-top: 0; margin-bottom: 30px; text-align: center; }
+.content-section h3 { font-size: 24px; color: #19469D; }
+.content-section p { margin-bottom: 20px; }
+.two-column-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 20px; }
+.text-left { text-align: left; }
+.text-left h2 { text-align: left; }
+
+/* --- Dark Content Section --- */
+.dark-section { background-color: #0C0E24; color: #ffffff; position: relative; }
+.dark-section .content-section { padding-top: 80px; padding-bottom: 80px; }
+.dark-section h2, .dark-section h3 { color: #ffffff; }
+.dark-section p { color: #ccc; }
+.dark-section .button:hover { background-color: transparent; color: #ffffff; }
+
+/* --- STYLES FOR ESTATE SOLUTIONS --- */
+.title-banner { background-color: #19469D; padding: 50px 20px; text-align: center; }
+.title-banner h2 { color: #ffffff; margin: 0; }
+.full-width-image { width: 100%; height: auto; display: block; margin: 40px 0; }
+.dark-section.has-curved-top { padding-top: 80px; margin-top: -1px; }
+.dark-section.has-curved-top::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,100 C40,20 60,20 100,100' fill='%23fff'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    transform: translateY(-100%);
+}
+.dark-section.has-curved-top .content-section { padding-top: 20px; }
+
+/* --- About Section Layout --- */
+.about-layout { display: flex; align-items: flex-start; gap: 40px; }
+.about-image { flex: 0 0 350px; max-width: 350px; }
+.about-image img { width: 100%; height: auto; border-radius: 8px; }
+.about-text { flex: 1; }
+
+/* --- Checklist & Download Form Styles --- */
+.checklist-intro { display: flex; align-items: center; gap: 40px; }
+.checklist-text { flex: 2; text-align: left; }
+.checklist-side-image { flex: 1; }
+.checklist-side-image img { max-width: 100%; border-radius: 8px; }
+.checklist-cta-banner { background-color: #0C0E24; color: #fff; padding: 40px 60px; display: flex; align-items: center; justify-content: center; gap: 20px; position: relative; overflow: hidden; }
+.checklist-cta-content h3 { font-size: 28px; margin-top: 0; margin-bottom: 0px; color: #fff; }
+.checklist-mockup-img { max-width: 250px; transform: rotate(10deg) translateX(20%); position: absolute; right: 0; bottom: -50px; z-index: 1; opacity: 0.5; }
+#download-form form { max-width: 700px; margin: 20px auto; text-align: left; }
+#download-form .form-row { display: flex; gap: 20px; margin-bottom: 15px; }
+#download-form .form-group { flex: 1; display: flex; flex-direction: column; }
+#download-form .form-group label { margin-bottom: 5px; font-size: 14px; font-weight: bold; }
+#download-form .form-group input { padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px; }
+#download-form form button { width: 100%; margin-top: 20px; }
+
+/* --- FAQ Accordion Styles --- */
+.faq-subheading { text-align: left; font-size: 24px; color: #0c0e24; margin-top: 40px; margin-bottom: 10px; border-top: 1px solid #ddd; padding-top: 30px; }
+.faq-accordion { max-width: 900px; margin: 20px auto; text-align: left; }
+.faq-item { border-bottom: 1px solid #ddd; }
+.faq-accordion:first-of-type .faq-item:first-child { border-top: 1px solid #ddd; }
+.faq-question { width: 100%; background: none; border: none; padding: 20px; font-size: 18px; font-weight: bold; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: #333; }
+.faq-question:hover { background-color: #f0f0f0; }
+.faq-icon { font-size: 24px; font-weight: bold; transition: transform 0.3s ease; }
+.faq-question.active .faq-icon { transform: rotate(45deg); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out, padding 0.3s ease-out; padding: 0 20px; line-height: 1.6; }
+.faq-answer.active { max-height: 1000px; padding: 0 20px 20px 20px; }
+
+/* --- Footer --- */
+.site-footer { text-align: center; padding: 40px 20px; background-color: #0C0E24; color: #aaa; font-size: 14px; }
+.site-footer a { color: #aaa; text-decoration: none; }
+.site-footer a:hover { text-decoration: underline; }
+
+/* --- Attorney Form Styles --- */
+#attorney-info form { margin-top: 40px; text-align: left; }
+.form-subheading { font-size: 28px; color: #0C0E24; margin-top: 30px; margin-bottom: 20px; border-top: 1px solid #ddd; padding-top: 30px; }
+#attorney-info .form-row { display: flex; gap: 20px; }
+#attorney-info .form-group { display: flex; flex-direction: column; margin-bottom: 20px; flex: 1; }
+#attorney-info .form-group label { margin-bottom: 5px; font-weight: bold; font-size: 14px; }
+#attorney-info .form-group input { padding: 12px; border: 1px solid #ddd; background-color: #f9f9f9; border-radius: 4px; font-size: 16px; }
+.form-helper-text { font-size: 13px; color: #666; margin-top: -15px; margin-bottom: 20px; }
+.radio-group { display: flex; gap: 20px; align-items: center; }
+.radio-group label { font-weight: normal; }
+.radio-group input { margin-right: 5px; }
+#attorney-info form button { width: auto; margin-top: 20px; }
+
+/* --- Thank You Page Styles --- */
+.thank-you-page { display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+.thank-you-page h1 { font-size: 48px; }
+
+/* --- Market Evaluation Page Styles --- */
+.page-container { min-height: 80vh; }
+.intro-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 50px; margin-bottom: 50px; align-items: start; }
+.intro-text h1 { font-size: 36px; text-align: left; margin-bottom: 20px; }
+.intro-text ul { padding-left: 20px; margin: 0; }
+.intro-text li { margin-bottom: 15px; }
+.contact-card { background-color: #f9f9f9; padding: 30px; border-radius: 8px; border: 1px solid #eee; }
+.contact-card h3 { margin-top: 0; font-size: 24px; color: #0C0E24; }
+.contact-card p { font-size: 14px; line-height: 1.6; }
+.contact-card a { color: #19469D; text-decoration: none; }
+.contact-card a:hover { text-decoration: underline; }
+.form-heading { font-size: 28px; font-weight: bold; color: #0C0E24; margin-top: 40px; margin-bottom: 25px; border-bottom: 1px solid #ddd; padding-bottom: 15px; text-align: left; }
+main form .form-group label { margin-bottom: 5px; font-size: 14px; font-weight: normal; }
+main form .form-group input, main form .form-group textarea { padding: 12px; border: 1px solid #ddd; background-color: #f9f9f9; border-radius: 4px; font-size: 16px; width: 100%; box-sizing: border-box;}
+main form .form-row { display: flex; gap: 20px; }
+main form .form-group { display: flex; flex-direction: column; margin-bottom: 20px; flex: 1; }
+main form button { margin-top: 20px; }
+.radio-group-horizontal, .radio-group-vertical { display: flex; gap: 15px; align-items: center; margin-top: 10px; }
+.radio-group-vertical { flex-direction: column; align-items: flex-start; }
+.radio-group-horizontal label, .radio-group-vertical label { font-weight: normal; font-size: 14px; display: flex; align-items: center; }
+.radio-group-horizontal input, .radio-group-vertical input { margin-right: 8px; }
+
+/* --- Cash Advance Page Styles --- */
+.banner-subtext { color: #eee; font-size: 16px; max-width: 800px; margin: 20px auto 0; }
+#cash-advance-page .two-column-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+#cash-advance-page .column-image img { width: 100%; border-radius: 8px; }
+#cash-advance-page .column-text h3 { text-align: left; }
+.styled-list { list-style: none; padding-left: 0; }
+.styled-list li { padding-left: 1.5em; position: relative; margin-bottom: 1em; }
+.styled-list li::before { content: '✓'; color: #19469D; position: absolute; left: 0; font-weight: bold; }
+#contact-form h2 { color: #fff; }
+#contact-form form { text-align: left; }
+.form-subheading-light { font-size: 24px; color: #fff; margin-top: 30px; margin-bottom: 20px; border-top: 1px solid #444; padding-top: 30px; text-align: left; }
+#contact-form .form-group label { color: #fff; }
+#contact-form .form-group input { background-color: #fff; border-color: #fff; }
+
+.image-overlay-section {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    color: #000000; /* Black text */
+}
+.image-overlay-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(255, 255, 255, 0.95); /* White with 95% opacity */
+    z-index: 1;
+}
+.image-overlay-section .content-section {
+    position: relative;
+    z-index: 2;
+}
+.image-overlay-section h3 {
+    color: #000000; /* Black heading */
+    text-align: left;
+}
+.image-overlay-section .styled-list li::before {
+    color: #000000; /* Make checkmarks black */
+}
+
+
+/* --- Responsive --- */
+@media (max-width: 980px) {
+    .header-container { flex-direction: column; gap: 15px; }
+    .main-nav { justify-content: center; }
+    .two-column-layout, #cash-advance-page .two-column-layout { grid-template-columns: 1fr; }
+    #download-form .form-row, #attorney-info .form-row, main form .form-row { flex-direction: column; gap: 0; }
+    #download-form .form-group, #attorney-info .form-group, main form .form-group { margin-bottom: 20px; }
+    .intro-layout { grid-template-columns: 1fr; }
+    #cash-advance-page .two-column-layout .column-image { order: -1; }
+}
+@media (max-width: 767px) {
+    .main-nav { display: none; }
+    .slide-content h2 { font-size: 32px; }
+    .header-top-bar { display: none; }
+    .about-layout { flex-direction: column; align-items: center; }
+    .about-image { margin-bottom: 20px; flex-basis: auto; max-width: 80%; }
+    .checklist-intro { flex-direction: column; }
+    .checklist-cta-banner { flex-direction: column; text-align: center; }
+    .checklist-mockup-img { display: none; }
+}
